@@ -336,32 +336,41 @@ hr{
 /* Testimonial */
 
 
-#testimonial{
-    width:100%;
-    padding:100px 0;
+#testimonial {
+    width: 100%;
+    padding: 100px 0;
 }
 
-.testimonial-row{
-    width:80%;
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    margin:auto;
-    flex-wrap:wrap;
+.testimonial-row {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
 }
 
-.testimonial-col{
-    flex-basis:28%;
-    padding:10px;
-    margin-bottom:30px;
-    border-radius:5px;
+.testimonial-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 5px;
     box-shadow: 0 10px 20px 3px #00968814;
-    cursor:pointer;
+    cursor: pointer;
     transition: 0.5s;
+    background: #fff;
 }
 
-.testimonial-col p{
-    font-size: 14px;    
+.testimonial-col p {
+    flex-grow: 1;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+@media (max-width: 750px) {
+    .testimonial-row {
+        width: 92%;
+    }
 }
 
 .user{
@@ -511,6 +520,87 @@ hr{
 
 
 
+.banner-text h1 {
+    font-size: clamp(2.2rem, 8vw + 1rem, 130px);
+}
 
+@media (max-width: 750px) {
+    #banner {
+        height: 85vh;
+        background-position: center 25%;
+    }
+    .banner-text {
+        padding-top: 140px;
+    }
+}
 
+@media (max-width: 480px) {
+    #banner {
+        height: 80vh;
+        background-position: center 20%;
+    }
+
+    .banner-text {
+        padding-top: 90px;
+    }
+
+    .banner-text p {
+        font-size: 0.95rem;
+    }
+    .banner-text h1 {
+        margin-top: 100px;
+    }
+
+    .banner-btn {
+        margin: 40px auto 0;
+    }
+
+    .banner-btn a {
+        display: block;
+        width: 130px;
+        margin: 14px auto;
+        font-size: 0.9rem;
+        padding: 10px 0;
+    }
+
+    .title-text h1 {
+        font-size: 1.75rem;
+    }
+
+    .title-text p {
+        font-size: 0.9rem;
+    }
+
+    .feature-box,
+    .service-box,
+    .testimonial-row,
+    .footer-row {
+        width: 92%;
+    }
+
+    .features,
+    .features-img,
+    .single-service,
+    .testimonial-col {
+        flex-basis: 100%;
+    }
+
+    .features-img img,
+    .single-service img {
+        width: 100%;
+    }
+
+    .service-desc {
+        font-size: 0.78rem;
+    }
+
+    .footer-left,
+    .footer-right {
+        text-align: center;
+    }
+
+    .footer-row p {
+        line-height: 28px;
+    }
+}
 
