@@ -56,7 +56,7 @@ project-root/
 ├── style.css
 ├── images/
 │ ├── banner.jpg
-│ └── ...other images
+│ └── ..other images
 
 
 📌 Notes
